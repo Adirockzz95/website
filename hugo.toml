@@ -14,3 +14,7 @@ tag = "tags"
 [markup.highlight]
 style = "friendly"
 noClasses = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
