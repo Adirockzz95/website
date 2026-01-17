@@ -1,0 +1,11 @@
+<div class="slider" style="--w: {{ .Get 0 }}; --h: {{ .Get 1 }};">
+  <button class="nav prev">‹</button>
+
+  <div class="slides">
+    {{ range .Params | after 2 }}
+      <img src="{{ . }}" alt="">
+    {{ end }}
+  </div>
+
+  <button class="nav next">›</button>
+</div>

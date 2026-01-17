@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/syntax.css">
+<style>
+body { font-family: Georgia, "Times New Roman", serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; background-color:#f4f2ee; color:#222}
+nav { margin-bottom: 16px; }
+nav a { margin-right: 6px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+.tag { font-size: 0.85em; margin-left: 6px; }
+
+
+.img-frame {
+  width: var(--w, 600px);
+  height: var(--h, 360px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.note-box {
+  background: #e6edf4;         
+  border: 1px solid #cdd9e5;   
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 0.95em;
+  color: #1f2d3d;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+pre {
+  background: #ece9e3;
+  padding: 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+code {
+  background: none;
+  color: #1f1f1f;
+  font-family: monospace;
+}
+
+.slider {
+  position: relative;
+  width: var(--w, 500px);
+  height: var(--h, 320px);
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+  z-index: 10;            
+  pointer-events: auto;  
+}
+
+.nav.prev { left: 8px; }
+.nav.next { right: 8px; }
+
+
+
+
+</style>
+</head>
+<body>
+<nav>
+<a href="/">Home</a> |
+<a href="/notes/">Notes</a> |
+<a href="/comics/">Comics</a> |
+<a href="/about/">About</a>
+</nav>
+<hr>
+
+
+<h1>Notes</h1>
+
+
+
+<ul>
+
+  <li>
+    <a href="/notes/dhoom2/">Dhoom 2: A robbery car project</a><br>
+    <span class="date">17 Jan 2026</span>
+    
+      <a class="tag" href="/tags/project/">[project]</a>
+    
+  </li>
+
+</ul>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.slider').forEach(slider => {
+    const slides = slider.querySelector('.slides');
+    const images = slides.children;
+    let index = 0;
+
+    slider.querySelector('.next').onclick = () => {
+      index = (index + 1) % images.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    slider.querySelector('.prev').onclick = () => {
+      index = (index - 1 + images.length) % images.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+  });
+});
+</script>
+
+
+</body>
+</html>

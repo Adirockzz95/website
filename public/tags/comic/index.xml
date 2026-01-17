@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>comic on Aditya Khandkar</title>
+    <link>/tags/comic/</link>
+    <description>Recent content in comic on Aditya Khandkar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/comic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Late night debugging</title>
+      <link>/comics/debugging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/comics/debugging/</guid>
+      <description>(Comic image goes here)</description>
+    </item>
+    
+  </channel>
+</rss>

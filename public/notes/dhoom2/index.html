@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dhoom 2: A robbery car project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/syntax.css">
+<style>
+body { font-family: Georgia, "Times New Roman", serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; background-color:#f4f2ee; color:#222}
+nav { margin-bottom: 16px; }
+nav a { margin-right: 6px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+.tag { font-size: 0.85em; margin-left: 6px; }
+
+
+.img-frame {
+  width: var(--w, 600px);
+  height: var(--h, 360px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.note-box {
+  background: #e6edf4;         
+  border: 1px solid #cdd9e5;   
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 0.95em;
+  color: #1f2d3d;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+pre {
+  background: #ece9e3;
+  padding: 14px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+code {
+  background: none;
+  color: #1f1f1f;
+  font-family: monospace;
+}
+
+.slider {
+  position: relative;
+  width: var(--w, 500px);
+  height: var(--h, 320px);
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 6px;
+  display: block;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #ccc;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+  z-index: 10;            
+  pointer-events: auto;  
+}
+
+.nav.prev { left: 8px; }
+.nav.next { right: 8px; }
+
+
+
+
+</style>
+</head>
+<body>
+<nav>
+<a href="/">Home</a> |
+<a href="/notes/">Notes</a> |
+<a href="/comics/">Comics</a> |
+<a href="/about/">About</a>
+</nav>
+<hr>
+
+
+<h1>Dhoom 2: A robbery car project</h1>
+
+<p class="meta">
+  17 Jan 2026
+  
+    [<a class="tag" href="/tags/project/">project</a>]
+  
+</p>
+
+<hr>
+
+<p>If you’re a millennial kid who grew up loving the first Dhoom movie. You know firsthand how grand the experience was to watch Dhoom 2. The high-tech gadgets, the famous diamond robbery - it was one of the best Bollywood sci-fi tech movies of its time.  I was just 10 years old back then.</p>
+<p>Fast forward to 2026. Twenty years later, I think it’s finally time to build the car replica, to relive the nostalgia and have some fun.</p>
+<p>We’ve all seen the craze around Iron Man suits and the 90s trend of Batmobile builds among young engineers. Movie-inspired projects have become a way to turn childhood inspiration into real-world creations.This is my take on bringing a bit of that movie magic to life.</p>
+<p>So, let’s begin. <em>Cue</em> <em>“<strong>ta na na na na na na na na</strong>”</em></p>
+<br>
+<h2 id="first-steps">First steps</h2>
+<p>I’ve been working on this project for a year now. It seemed simple at first, but once you get down to the details, things become far more trickier. This is why plan first, define the scope as early as possible.</p>
+<p>In the movie, most of the props are created using a mix of CGI and practical effects, so it’s important to figure out what can be built practically. In the case of the <em>Dhoom 2</em> car, I found that recreating the car’s design, adding a camera, and implementing the iris-opening mechanism are all doable.</p>
+<p>However, there are a few limitations. Features like the arm popping out (even though vacuum robots come with arms now[1]) and the car climbing over the diamond podium aren’t realistically achievable for this build. They&rsquo;re CG in the movie anyway.</p>
+<p>When planning a project like this, you need to decide what you really want from it. Is it mainly about getting the look right, or do you also want real mechanical and electronic functionality? With movie props, appearance alone already takes up most of the effort. Matching what was shown on screen is easily the major challenge. Once that direction is clear, you can optimize the rest of the build around it.</p>
+<p>So, with all that in mind, I decided to build following things since they&rsquo;re enough to film a sequence shown in the movie.</p>
+<ol>
+<li>The Car</li>
+<li>The Book</li>
+<li>Staging the robbery scene</li>
+</ol>
+<br>
+<h2 id="the-car">The Car</h2>
+<p>In the movie, the car prop is used in the famous diamond robbery scene where the thief uses an RC car to steal a diamond from the museum. <a href="https://www.youtube.com/watch?v=3bMYgo_S0Kc">Here&rsquo;s the link to refresh your memory</a></p>
+<p>The car’s design is surprisingly practical. Apart from the obvious CGI elements, most of its features felt plausible enough to attempt recreating practically.</p>
+<h4 id="build">Build</h4>
+<p>First task is to estimate the dimensions of the car. Its tricky to do that because the perceived dimension will change based on the camera angle and distance.</p>
+<div class="slider" style="--w: 600px; --h: 300px;">
+  <button class="nav prev">‹</button>
+
+  <div class="slides">
+    
+      <img src="film_compare2.jpg" alt="">
+    
+      <img src="car_diff_size.jpg" alt="">
+    
+      <img src="top_view.png" alt="">
+    
+  </div>
+
+  <button class="nav next">›</button>
+</div>
+
+<p>Luckily, In one of the scene, they show the camera 35mm film beside the opened car. Since we know tts a 35mm film, we can measure how many pixels are the film and based on that guess the car dims. Its not accurate but enough to give us the ball park.  I did this in fusion 360 by importing image as canvas. This can also be done using OpenCV.</p>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.slider').forEach(slider => {
+    const slides = slider.querySelector('.slides');
+    const images = slides.children;
+    let index = 0;
+
+    slider.querySelector('.next').onclick = () => {
+      index = (index + 1) % images.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    slider.querySelector('.prev').onclick = () => {
+      index = (index - 1 + images.length) % images.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+  });
+});
+</script>
+
+
+</body>
+</html>

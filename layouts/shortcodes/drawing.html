@@ -1,0 +1,12 @@
+<div class="img-frame comic-panel" style="--w: {{ .Get 2 }}; --h: {{ .Get 3 }};">
+  <picture>
+    {{ if .Get 1 }}
+      <source srcset="{{ .Get 1 }}" media="(prefers-color-scheme: dark)">
+    {{ end }}
+    <img src="{{ .Get 0 }}" alt="{{ .Get 4 }}">
+  </picture>
+
+  {{ if .Get 5 }}
+    <p class="comic-caption">{{ .Get 5 }}</p>
+  {{ end }}
+</div>
