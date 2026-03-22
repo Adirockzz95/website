@@ -4,6 +4,9 @@ tags: ["project"]
 date: 17 Jan 2026
 ---
 
+{{< youtube PWYd4-VPEuY>}}
+
+
 
 If you’re a millennial kid who grew up loving the first Dhoom movie. You know firsthand how grand the experience was to watch Dhoom 2. The high-tech gadgets, the famous diamond robbery - it was one of the best Bollywood sci-fi tech movies of its time.  I was just 10 years old back then.
 
